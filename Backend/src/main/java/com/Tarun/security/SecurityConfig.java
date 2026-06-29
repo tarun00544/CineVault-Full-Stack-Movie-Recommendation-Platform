@@ -40,12 +40,11 @@ public class SecurityConfig {
     )
     
                .authorizeHttpRequests(auth -> auth
-
-                .requestMatchers("/auth/**").permitAll()
+                  .requestMatchers("/auth/**", "/api/auth/**").permitAll()
 
                  .requestMatchers(HttpMethod.GET,"/api/movies/**").permitAll()
                   
-                 .requestMatchers(HttpMethod.POST, "/api/movies/upload").permitAll()
+                  
 
                  .anyRequest().authenticated()
 
