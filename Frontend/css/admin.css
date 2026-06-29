@@ -1,0 +1,254 @@
+/* ============================================================
+   admin.css
+   CineVault Admin Panel
+============================================================ */
+
+/* ---------- PAGE ---------- */
+
+body {
+    background: #0f0f0f;
+    color: #ffffff;
+}
+
+/* ---------- NAVBAR ---------- */
+
+.cv-navbar {
+    background: #141414;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.navbar-brand{
+    color:#ff3b3b !important;
+    font-size:1.6rem;
+    font-weight:700;
+}
+
+.nav-link{
+    color:#d9d9d9 !important;
+    transition:.3s;
+}
+
+.nav-link:hover,
+.nav-link.active{
+    color:#ff3b3b !important;
+}
+
+/* ---------- CARDS ---------- */
+
+.admin-card{
+
+    background:#181818;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    text-align:center;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    transition:.35s;
+
+    height:100%;
+
+}
+
+.admin-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 15px 30px rgba(255,0,0,.18);
+
+}
+
+.admin-icon{
+
+    font-size:40px;
+
+    color:#ff3b3b;
+
+    margin-bottom:18px;
+
+}
+
+.admin-card h5{
+
+    color:#bdbdbd;
+
+    margin-bottom:10px;
+
+}
+
+.admin-card h2{
+
+    font-size:42px;
+
+    color:white;
+
+    font-weight:700;
+
+}
+
+/* ---------- TABLE ---------- */
+
+.table{
+
+    margin-bottom:0;
+
+}
+
+.table thead{
+
+    background:#202020;
+
+}
+
+.table th{
+
+    color:#ff3b3b;
+
+    border:none;
+
+    font-weight:600;
+
+}
+
+.table td{
+
+    vertical-align:middle;
+
+    border-color:#2d2d2d;
+
+}
+
+/* ---------- SEARCH ---------- */
+
+.form-control{
+
+    background:#101010;
+
+    color:white;
+
+    border:1px solid #333;
+
+}
+
+.form-control:focus{
+
+    background:#101010;
+
+    color:white;
+
+    border-color:#ff3b3b;
+
+    box-shadow:none;
+
+}
+
+/* ---------- BUTTONS ---------- */
+
+.btn-danger{
+
+    background:#ff3b3b;
+
+    border:none;
+
+}
+
+.btn-danger:hover{
+
+    background:#ff2020;
+
+}
+
+.btn-warning{
+
+    color:white;
+
+}
+
+.btn-sm{
+
+    margin-right:5px;
+
+}
+
+/* ---------- EMPTY STATE ---------- */
+
+.no-data{
+
+    padding:60px;
+
+    text-align:center;
+
+    color:#999;
+
+}
+
+.no-data i{
+
+    font-size:60px;
+
+    color:#555;
+
+    margin-bottom:15px;
+
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media(max-width:992px){
+
+.admin-card{
+
+margin-bottom:20px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.table{
+
+font-size:14px;
+
+}
+
+.admin-card h2{
+
+font-size:32px;
+
+}
+
+.admin-icon{
+
+font-size:30px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.container{
+
+padding-left:15px;
+
+padding-right:15px;
+
+}
+
+.table{
+
+font-size:13px;
+
+}
+
+.btn{
+
+font-size:13px;
+
+}
+
+}

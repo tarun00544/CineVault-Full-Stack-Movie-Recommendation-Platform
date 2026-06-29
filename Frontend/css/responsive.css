@@ -1,0 +1,77 @@
+/* ============================================================
+   Responsive overrides — Tablet & Mobile
+   ============================================================ */
+
+/* ---------- Tablet (<=991px) ---------- */
+@media (max-width: 991px) {
+  .auth-visual-panel { display: none; }
+  .auth-form-panel { flex: 1; max-width: 100%; padding: 3rem 7%; }
+
+  .quick-nav-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .details-poster { width: 200px; flex: 0 0 200px; }
+  .details-info h1 { font-size: 2.2rem; }
+
+  .hero { min-height: 78vh; padding: 0 5%; }
+  .section { padding: 3.5rem 5%; }
+}
+
+/* ---------- Mobile (<=767px) ---------- */
+@media (max-width: 767px) {
+  .cv-navbar { padding: 0 4%; }
+  .cv-navbar .navbar-collapse {
+    position: absolute;
+    top: var(--nav-height);
+    left: 0; right: 0;
+    background: rgba(12,12,12,0.98);
+    backdrop-filter: blur(14px);
+    padding: 1.2rem 6%;
+    border-bottom: 1px solid var(--glass-border);
+  }
+  .cv-navbar .nav-link { margin: 0; padding: 12px 2px !important; border-bottom: 1px solid var(--glass-border); }
+  .cv-navbar .nav-link:last-child { border-bottom: none; }
+
+  .hero { min-height: 86vh; text-align: left; }
+  .hero h1 { font-size: 2.4rem; }
+  .hero-cta { flex-direction: column; align-items: stretch; }
+  .hero-cta .btn-cv-primary, .hero-cta .btn-cv-outline { width: 100%; text-align: center; }
+
+  .section { padding: 3rem 5%; }
+  .section-heading { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
+
+  .movie-card { flex: 0 0 150px; }
+  .movies-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 0.9rem; }
+
+  .cta-band { padding: 2.5rem 1.5rem; margin: 1.5rem 5%; }
+
+  .auth-form-panel { padding: 2.5rem 6%; }
+  .auth-logo { font-size: 1.6rem; }
+
+  .filter-bar { flex-direction: column; align-items: stretch; top: var(--nav-height); }
+  .filter-bar .search-box { max-width: 100%; }
+  .filter-bar select { width: 100%; }
+  .filter-bar .results-count { margin-left: 0; }
+
+  .stat-card .stat-value { font-size: 1.7rem; }
+  .quick-nav-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .details-body { flex-direction: column; align-items: center; text-align: center; padding: 1.8rem 6%; }
+  .details-poster { width: 180px; flex: 0 0 180px; }
+  .details-meta-row { justify-content: center; }
+  .details-actions { justify-content: center; }
+  .crew-grid { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); }
+
+  #cv-toast-container { left: 16px; right: 16px; max-width: none; top: 80px; }
+
+  .cv-footer { padding: 2.5rem 6% 1.2rem; text-align: center; }
+  .cv-footer .col-md-3 { margin-bottom: 1.8rem; }
+  .footer-bottom { justify-content: center; text-align: center; }
+}
+
+/* ---------- Small mobile (<=480px) ---------- */
+@media (max-width: 480px) {
+  .hero h1 { font-size: 2rem; }
+  .details-info h1 { font-size: 1.8rem; }
+  .quick-nav-grid { grid-template-columns: 1fr 1fr; }
+  .dash-welcome h1 { font-size: 1.9rem; }
+}

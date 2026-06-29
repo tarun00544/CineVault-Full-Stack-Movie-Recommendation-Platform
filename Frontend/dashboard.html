@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — CineVault</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="cv-navbar navbar navbar-expand-lg">
+    <div class="container-fluid px-0 d-flex align-items-center w-100">
+      <a class="navbar-brand" href="index.html"><i class="fa-solid fa-clapperboard"></i> CineVault</a>
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="movies.html">Movies</a></li>
+          <li class="nav-item" data-auth-only><a class="nav-link active" href="dashboard.html">Dashboard</a></li>
+          <li class="nav-item" data-auth-only><a class="nav-link" href="wishlist.html">Wishlist</a></li>
+          <li class="nav-item" data-guest-only><a class="nav-link" href="login.html">Login</a></li>
+          <li class="nav-item ms-lg-2" data-guest-only><a class="nav-link btn-cv-primary px-3 py-2 text-white" href="signup.html">Sign Up</a></li>
+          <li class="nav-item dropdown ms-lg-2" data-auth-only>
+            <a class="nav-user-pill dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-user-pill style="display:none;">
+              <div class="avatar-circle" data-avatar>U</div>
+              <span data-username>Account</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="dashboard.html"><i class="fa-solid fa-gauge me-2"></i>Dashboard</a></li>
+              <li><a class="dropdown-item" href="profile.html"><i class="fa-solid fa-user me-2"></i>Profile</a></li>
+              <li><a class="dropdown-item" href="wishlist.html"><i class="fa-solid fa-heart me-2"></i>Wishlist</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item text-danger" href="#" data-logout><i class="fa-solid fa-right-from-bracket me-2"></i>Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="dash-shell container-fluid px-6" style="padding-left:6%; padding-right:6%;">
+
+    <div class="dash-welcome">
+      <h1>Welcome back, <span class="text-accent" id="welcomeName">there</span></h1>
+      <p>Here's what's happening across your CineVault catalog today.</p>
+    </div>
+
+    <!-- Stat cards -->
+    <div class="row g-3 mb-4">
+      <div class="col-sm-6 col-lg-3">
+        <div class="stat-card">
+          <div class="stat-icon bg-red"><i class="fa-solid fa-film"></i></div>
+          <div class="stat-value" id="statTotalMovies">—</div>
+          <div class="stat-label">Total Movies</div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="stat-card">
+          <div class="stat-icon bg-gold"><i class="fa-solid fa-star"></i></div>
+          <div class="stat-value" id="statTopRated">—</div>
+          <div class="stat-label">Top Rated — <span id="statTopRatedTitle">—</span></div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="stat-card">
+          <div class="stat-icon bg-blue"><i class="fa-solid fa-fire"></i></div>
+          <div class="stat-value" id="statTrending">—</div>
+          <div class="stat-label">Trending (rated 7+)</div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="stat-card">
+          <div class="stat-icon bg-green"><i class="fa-solid fa-calendar-days"></i></div>
+          <div class="stat-value" id="statLatest">—</div>
+          <div class="stat-label">Latest Releases</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Panels -->
+    <div class="row g-3 mb-4">
+      <div class="col-lg-7">
+        <div class="dash-panel">
+          <h5 class="dash-panel-title">Recent Movies</h5>
+          <div id="recentMoviesList"></div>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="dash-panel">
+          <h5 class="dash-panel-title">Genre Distribution</h5>
+          <div id="genreDistributionList"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick navigation -->
+    <h5 class="dash-panel-title mb-2">Quick Navigation</h5>
+    <div class="quick-nav-grid">
+      <a href="movies.html" class="quick-nav-tile"><i class="fa-solid fa-clapperboard"></i><span>Browse Movies</span></a>
+      <a href="wishlist.html" class="quick-nav-tile"><i class="fa-solid fa-heart"></i><span>My Wishlist</span></a>
+      <a href="movies.html?sort=rating-desc" class="quick-nav-tile"><i class="fa-solid fa-star"></i><span>Top Rated</span></a>
+      <a href="profile.html" class="quick-nav-tile"><i class="fa-solid fa-user-gear"></i><span>Profile Settings</span></a>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="js/dashboard.js"></script>
+</body>
+</html>
