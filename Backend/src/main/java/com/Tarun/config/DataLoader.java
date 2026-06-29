@@ -16,9 +16,7 @@ public class DataLoader implements CommandLineRunner {
      @Override
 public void run(String... args) {
 
-    if (movieRepository.count() > 0) {
-        return;
-    }
+    
 
     movieRepository.save(Movie.builder()
             .title("Avengers: Endgame")
