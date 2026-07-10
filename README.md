@@ -1,4 +1,4 @@
- 🎬 Movie Recommendation Platform
+🎬 Movie Recommendation Platform
 
 A full-stack Movie Recommendation Platform built using Java, Spring Boot, MongoDB, HTML, CSS, and JavaScript. The application allows users to browse, manage, and explore movie information through a modern web interface with RESTful APIs.
 
